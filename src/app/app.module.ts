@@ -14,6 +14,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { LoginComponent } from './Components/login/login.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ForgetPasswordComponent } from './Components/forget-password/forget-pas
     MatButtonToggleModule,
     MatCardModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    BrowserAnimationsModule
    
   ],
   providers: [],

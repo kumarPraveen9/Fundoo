@@ -16,6 +16,9 @@ import { ResetPasswordComponent } from './Components/reset-password/reset-passwo
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatCardModule,
     MatButtonModule,
     MatCheckboxModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
    
   ],
   providers: [],

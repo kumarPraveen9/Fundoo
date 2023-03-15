@@ -13,15 +13,15 @@
         <h3>to continue to Fundoo</h3>
     </div>
 
-    <form>
+    <form [formGroup]="registerForm" (ngSubmit)="login()">
         
     
         <div class="form-group rw">
           <mat-form-field appearance="outline" class="form-field rw1">
               <mat-label>Email or phone</mat-label>
-              <input matInput type="email" placeholder="email or phone" >
+              <input matInput type="email" placeholder="email or phone" formControlName="email">
               
-              <mat-error>input is reqiured</mat-error>
+              <mat-error>Email is reqiured</mat-error>
           </mat-form-field>
          
               

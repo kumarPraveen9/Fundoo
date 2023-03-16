@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MustMatch } from "./must-match/validate-password";
+import { UserService } from 'src/app/Components/Services/user/user.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -12,7 +13,7 @@ export class SignUpComponent implements OnInit {
   registerForm!: FormGroup;
   submitted = false;
   hide : boolean = true;
-  constructor(private formBuilder: FormBuilder,private _snackBar:MatSnackBar) { }
+  constructor(private formBuilder: FormBuilder,private userService : UserService,private _snackBar:MatSnackBar) { }
 
     ngOnInit() {
         this.registerForm = this.formBuilder.group({
@@ -34,6 +35,16 @@ export class SignUpComponent implements OnInit {
       register()
       {
         if(this.registerForm.valid){
+          let data = {
+            firstName : this.registerForm.value.firstName,
+            lastName: this.registerForm.value.lastName,
+            email: this.registerForm.value.email,
+            password: this.registerForm.value.password,
+            service:'advance'
+          }
+          
+          this.userService.registration(data).subscribe((response:any)=>{
+              console.log("Register cli successful", response);  });
         console.log("reg called:",this.registerForm.value);
         this._snackBar.open("Registration Successfull",'',{duration:5000,horizontalPosition: 'start'});
         }

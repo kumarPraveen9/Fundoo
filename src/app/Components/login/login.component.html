@@ -15,21 +15,30 @@
 
     <form [formGroup]="registerForm" (ngSubmit)="login()">
         
+        <div class="form-group rw">
+            <mat-form-field appearance="outline" class="form-field rw1">
+                <mat-label>Username</mat-label>
+                <input matInput type="email" placeholder="@gmail.com" formControlName="email">
+                <mat-hint>You can use letters, numbers & periods</mat-hint>
+                <mat-error>mail is reqiured</mat-error>
+            </mat-form-field>
+          </div>
+      
+          <div class="form-group rww"  >
+            <mat-form-field appearance="outline" class="form-field rw1" >
+                <mat-label>Password</mat-label>
+                <input matInput type="password" placeholder="Password" formControlName="password" >
+              
+                <mat-error>Password is required</mat-error>
+            </mat-form-field>
+        </div>
     
-        <div class="form-group rw">
-          <mat-form-field appearance="outline" class="form-field rw1">
-              <mat-label>Email or phone</mat-label>
-              <input matInput type="email" placeholder="email or phone" formControlName="email">
-              
-              <mat-error>Email is reqiured</mat-error>
-          </mat-form-field>
-         
-              
+        <div class="form-group rww"  >
+            <div class="forgot" routerLink="/forget"><a href="forget">Forgot Password?</a></div>
         </div>
-        <div class="form-group rw">
-            <p class="qua">Forget email?</p>
-
-        </div>
+              
+       
+      
         
         <div class="form-group rw">
             <p class="qua1">Not your computer? Use a private browsing window to sign in.
@@ -38,7 +47,7 @@
         </div>
 
         <div class="form-group rww buttons">
-            <button mat-button class="btn-basic" color="primary">Create account</button>
+            <button mat-button class="btn-basic" color="primary" routerLink="/sign-up">Create account</button>
             <button mat-raised-button type="submit" class="btn-primary" color="primary" >Next</button>
         </div>
 

@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatCheckboxModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule
    
   ],
   providers: [],

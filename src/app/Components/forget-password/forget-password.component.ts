@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { UserService } from 'src/app/Components/Services/user/user.service';
 @Component({
   selector: 'app-forget-password',
   templateUrl: './forget-password.component.html',
@@ -11,7 +12,7 @@ export class ForgetPasswordComponent implements OnInit{
   registerForm!: FormGroup;
   submitted = false;
  
-  constructor(private formBuilder: FormBuilder,private _snackBar:MatSnackBar) { }
+  constructor(private formBuilder: FormBuilder,private userService : UserService,private _snackBar:MatSnackBar) { }
 
     ngOnInit() {
         this.registerForm = this.formBuilder.group({
@@ -28,6 +29,13 @@ export class ForgetPasswordComponent implements OnInit{
       forge()
       {
         if(this.registerForm.valid){
+          let data = {
+           
+            email: this.registerForm.value.email
+          }
+          
+          this.userService.forgotPassword(data).subscribe((response:any)=>{
+              console.log("Register cli successful", response);  });
         console.log("reg called:",this.registerForm.value);
         this._snackBar.open("Registration Successfull",'',{duration:5000,horizontalPosition: 'start'});
         }

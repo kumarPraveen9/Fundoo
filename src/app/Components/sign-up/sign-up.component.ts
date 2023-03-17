@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MustMatch } from "./must-match/validate-password";
 import { UserService } from 'src/app/Components/Services/user/user.service';
+import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-sign-up',
@@ -44,13 +45,22 @@ export class SignUpComponent implements OnInit {
           }
           
           this.userService.registration(data).subscribe((response:any)=>{
-              console.log("Register cli successful", response);  });
+              console.log("Register cli successful", response); 
+              this._snackBar.open("Registration Successfull",'',{duration:5000,horizontalPosition: 'start'});},
+              
+        (error) => {
+       console.log(error.message); 
+       
+        // handle error here
+        this._snackBar.open(error.message,'',{duration:15000, horizontalPosition: 'start'});
+        //this._snackBar.open("(Unprocessable Entity)",'422',{duration:5000, horizontalPosition: 'start'});
+        });
         console.log("reg called:",this.registerForm.value);
-        this._snackBar.open("Registration Successfull",'',{duration:5000,horizontalPosition: 'start'});
+        
         }
         else{
           console.log("fill all the fields");
-           this._snackBar.open("Registration Failed",'',{duration:5000, horizontalPosition: 'start'});
+           this._snackBar.open("fill all the fields properly",'',{duration:5000, horizontalPosition: 'start'});
           
         }
       }

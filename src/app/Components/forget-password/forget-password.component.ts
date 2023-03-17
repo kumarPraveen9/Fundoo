@@ -35,13 +35,19 @@ export class ForgetPasswordComponent implements OnInit{
           }
           
           this.userService.forgotPassword(data).subscribe((response:any)=>{
-              console.log("Register cli successful", response);  });
+              console.log("Register cli successful", response); 
+              this._snackBar.open("Registration Successfull",'',{duration:5000,horizontalPosition: 'start'});},
+              (error) => {
+                console.log(error.message);
+                // handle error here
+                this._snackBar.open(error.message,'',{duration:5000, horizontalPosition: 'start'});
+                });
         console.log("reg called:",this.registerForm.value);
-        this._snackBar.open("Registration Successfull",'',{duration:5000,horizontalPosition: 'start'});
+       
         }
         else{
           console.log("fill all the fields");
-           this._snackBar.open("Registration Failed",'',{duration:5000, horizontalPosition: 'start'});
+           this._snackBar.open("fill all the fields properly",'',{duration:5000, horizontalPosition: 'start'});
           
         }
       }

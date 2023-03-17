@@ -43,13 +43,14 @@ export class ResetPasswordComponent implements OnInit {
           }
           
           this.userService.resetPassword(data,this.token).subscribe((response:any)=>{
-              console.log("reset successful", response);  });
+              console.log("reset successful", response); 
+              this._snackBar.open("reset Successfull",'',{duration:5000,horizontalPosition: 'start'}); });
         console.log("reg called:",this.registerForm.value);
-        this._snackBar.open("reset Successfull",'',{duration:5000,horizontalPosition: 'start'});
+     
         }
         else{
           console.log("fill all the fields");
-           this._snackBar.open("reset Failed",'',{duration:5000, horizontalPosition: 'start'});
+           this._snackBar.open("fill all the fields properly",'',{duration:5000, horizontalPosition: 'start'});
           
         }
       }

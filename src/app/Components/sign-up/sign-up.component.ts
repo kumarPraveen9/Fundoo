@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MustMatch } from "./must-match/validate-password";
-import { UserService } from 'src/app/Components/Services/user/user.service';
+import { UserService } from 'src/app/Services/user/user.service';
 import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 
 @Component({
@@ -50,9 +50,16 @@ export class SignUpComponent implements OnInit {
               
         (error) => {
        console.log(error.message); 
-       
+       let response=error.message;
+       const rs1=422;
+       const rs2=401;
+       if(response.includes(rs1)){
+        this._snackBar.open('Input has been already registered','422',{duration:15000, horizontalPosition: 'start'});}
+       else if(response.includes(rs2)){
+        this._snackBar.open('Invalid Credentials','401',{duration:15000, horizontalPosition: 'start'});}
+      
         // handle error here
-        this._snackBar.open(error.message,'',{duration:15000, horizontalPosition: 'start'});
+        
         //this._snackBar.open("(Unprocessable Entity)",'422',{duration:5000, horizontalPosition: 'start'});
         });
         console.log("reg called:",this.registerForm.value);

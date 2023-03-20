@@ -205,24 +205,24 @@ mat-hint {
 
 @media only screen and (max-width: 599px) {
   .main {
-    display: block;
-    width: 370px;
-    height: 950px;
+    display: flex;
+    width: 100%;
+    height: 100vh;
     margin-left: 10px;
     margin-top: 10px;
-    position: relative;
-    align-items: center;
+    //position: relative;
+    //align-items: center;
     border-style: solid;
     border-color: #f8f6f6;
     border-width: 0.5px;
     border-radius: 8px;
   }
   .form_box {
-    width: 240px;
-    height: 640px;
+    width: 100%;
+    height: 100vh;
     // margin-left: 748px;
     // margin-top: 300px;
-    position: absolute;
+   // position: absolute;
     // border-color: black;
     // border-style: dashed;
   }
@@ -234,8 +234,12 @@ mat-hint {
   }
 
   .form_img img {
-    width: 0;
-    height: 0;
+    display:none
+    // width: 0%;
+    // height: 0vh;
+  }
+  .form_img{
+    display: none;
   }
   .tt{
     opacity: 0 !important;
@@ -254,12 +258,13 @@ mat-hint {
    margin-top: -40px;
     align-items: center;
     margin-bottom: 50px;
+    margin-right: 79px;
    
   }
 
   .form-field {
     width: 100%;
-   margin-left: 80px;
+   margin-left: 40px;
     margin-top: 70px;
     margin-right: 5px;
   }
@@ -275,8 +280,8 @@ mat-hint {
 
 .uy {
   position: absolute;
-  width: 134%;
-  margin-left: 10px !important;
+  width: 90%;
+  margin-left: 27px !important;
   margin-top: 0px !important;
   display: flex;
   justify-content: flex-start;
@@ -291,7 +296,7 @@ mat-hint {
 }
 
 .a{
-  margin-left: -17px;
+  margin-left: 5px;
 }
 .b{
   margin-left: 180px;
@@ -299,7 +304,7 @@ mat-hint {
 
 
 .mayy{
-  margin-left: -47px !important;
+  margin-left: -109px !important;
   margin-top: 35px !important;
 }
 

@@ -19,9 +19,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
 
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 
-
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -31,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     ResetPasswordComponent,
     ForgetPasswordComponent,
+    DashboardComponent,
    
    
    
@@ -40,15 +46,16 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     MatFormFieldModule,
-    MatInputModule,
-   
+    MatInputModule,MatToolbarModule,
+    MatListModule,MatIconModule,
     MatButtonModule,
     MatCheckboxModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatSnackBarModule,
     HttpClientModule
-   
+   ,MatSidenavModule,
+   MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

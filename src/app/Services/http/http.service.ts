@@ -16,4 +16,9 @@ postService(url: string, reqData: any, token: boolean, httpOptions: any) {
 putService(url : string, reqData: any,  tokenRequired: boolean , httpOptions: any){ 
   return this.httpClient.put(this.baseurl + url, reqData, tokenRequired && httpOptions);
  }
+
+ getService(url : string, tokenRequired : boolean, httpOptions : any ){
+    
+  return this.httpClient.get(this.baseurl+url,tokenRequired && httpOptions)
+}
 }

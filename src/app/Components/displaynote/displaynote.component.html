@@ -1,25 +1,25 @@
 <div class="display-note row">
-    <div *ngFor="let note of [0,1,2,3,4]">
-        <mat-card class="note-card" >
+    <div *ngFor="let note of NotesList">
+        <mat-card class="note-card">
             <button class="pinbutton">
                 <img class="pin" src="../../../assets/push_pin.svg">
             </button>
             <mat-card-title class="note-title">
-                <div>title</div>
+                {{note.title}}
             </mat-card-title>
-            <mat-card-content class="note-description" >
-               <div>description</div>
-                
+            <mat-card-content class="note-description">
+                {{note.description}}
+                <div> {{note.noteID}}</div>
             </mat-card-content>
             <div class="icons">
                 <button class="notesbutton">
-            <img src="../../../assets/add_alert.svg">
-            <img src="../../../assets/person_add.svg">
-            <img src="../../../assets/palette.svg">
-            <img src="../../../assets/image.svg">
-            <img src="../../../assets/archive.svg">
-            <img src="../../../assets/more.svg">
-          </button>
+                    <img src="../../../assets/add_alert.svg">
+                    <img src="../../../assets/person_add.svg">
+                    <img src="../../../assets/palette.svg">
+                    <img src="../../../assets/image.svg">
+                    <img src="../../../assets/archive.svg">
+                    <img src="../../../assets/more.svg">
+                </button>
                 <!-- <app-iconsnote></app-iconsnote> -->
             </div>
         </mat-card>

@@ -19,7 +19,7 @@ export class NodeService {
    let header = {
      headers:new HttpHeaders({
        'Content-type':'application/json',
-        'Authorization':'C4zFXUy6rBDSedLOFvI6GlqT4NAzCfH5dt5b6r7InKssQ5E4mz7StIzStIiHNPnB'
+        'Authorization':this.token
      })
    }
    return this.httpService.postService('notes/addNotes', reqData, true, header);
@@ -30,7 +30,7 @@ export class NodeService {
   let header = {
     headers:new HttpHeaders({
       'Content-type':'application/json',
-      'Authorization': 'C4zFXUy6rBDSedLOFvI6GlqT4NAzCfH5dt5b6r7InKssQ5E4mz7StIzStIiHNPnB'
+      'Authorization': this.token
     })
   }
   return this.httpService.getService('notes/getNotesList',true,header);

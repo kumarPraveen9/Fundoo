@@ -17,7 +17,8 @@ export class GetAllnotesComponent implements OnInit{
     console.log('Get all notes onsubmit:');
     this.nodeService.getallnotes().subscribe((response : any) => {
       console.log(response);
-      this.notesArray=response.data;
+      this.notesArray=response.data.data;
+      this.notesArray.reverse();
       console.log(this.notesArray);
     });
 

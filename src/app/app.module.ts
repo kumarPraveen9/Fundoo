@@ -31,6 +31,9 @@ import { CreatenoteComponent } from './Components/createnote/createnote.componen
 import { IconsnoteComponent } from './Components/iconsnote/iconsnote.component';
 import { GetAllnotesComponent } from './Components/get-allnotes/get-allnotes.component';
 import { DisplaynoteComponent } from './Components/displaynote/displaynote.component';
+import { DeletenoteComponent } from './Components/deletenote/deletenote.component';
+import { TrashnoteComponent } from './Components/trashnote/trashnote.component';
+import { UpdatenoteComponent } from './Components/updatenote/updatenote.component';
 
 
 @NgModule({
@@ -45,6 +48,9 @@ import { DisplaynoteComponent } from './Components/displaynote/displaynote.compo
     IconsnoteComponent,
     GetAllnotesComponent,
     DisplaynoteComponent,
+    DeletenoteComponent,
+    TrashnoteComponent,
+    UpdatenoteComponent,
    
    
    

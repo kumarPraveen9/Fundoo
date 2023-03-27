@@ -1,0 +1,23 @@
+<div class="display-note row">
+    <div *ngFor="let note of archiveList">
+      <mat-card class="note-card" [style.background]="note.color">
+        <mat-card-title class="note-title">
+          {{note.title}}
+        </mat-card-title>
+        <mat-card-content class="note-description">
+          {{note.description}}
+          <div> {{note.noteID}}</div>
+        </mat-card-content>
+        <div class="icons">
+          <button class="notesbutton">
+            <img src="../../../assets/add_alert.svg">
+            <img src="../../../assets/person_add.svg">
+            <img src="../../../assets/palette.svg">
+            <img src="../../../assets/image.svg">
+            <img src="../../../assets/undo.svg" >
+            <img src="../../../assets/more.svg">
+          </button>
+        </div>
+      </mat-card>
+    </div>
+  </div>

@@ -1,1 +1,16 @@
-<p>trashnote works!</p>
+<div class="display-note row">
+    <div *ngFor="let note of trashList">
+        <mat-card class="note-card">
+           
+            <mat-card-title class="note-title" >
+                {{note.title}}
+            </mat-card-title>
+            <mat-card-content class="note-description" >
+                {{note.description}}
+                <!-- <div> {{note.id}}</div> -->
+            </mat-card-content>
+           
+           
+        </mat-card>
+    </div>
+</div>

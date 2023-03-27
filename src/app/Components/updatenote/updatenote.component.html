@@ -1,1 +1,18 @@
-<p>updatenote works!</p>
+<div [style.background]="data.color" style="padding: 10px;">
+    <div class="text-Title">
+      <mat-card-title><input [style.background]="data.color" matInput [(ngModel)]="title"
+          style="width: 400px; height: 30px; border: none; outline: none;"></mat-card-title>
+    </div>
+    <div class="text-body">
+      <input [style.background]="data.color" matInput [(ngModel)]="description" style="width: 400px; height: 30px; border: none; outline: none;">
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between end">
+      <div class="icons">
+        <app-iconsnote [noteObject]="data"></app-iconsnote>
+        
+      </div>
+      <div>
+        <button mat-icon-button (click)="closeDialog()" style="opacity: 0.9;">Close</button>
+      </div>
+    </div>
+  </div>

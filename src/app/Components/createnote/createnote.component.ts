@@ -34,7 +34,7 @@ export class CreatenoteComponent implements OnInit {
         (response: any) => {
           console.log('addNote cli successful', response);
           //localStorage.setItem('token',response.id);
-          this._snackBar.open('Registration Successfull', '', {
+          this._snackBar.open('note added succesfully', '', {
             duration: 15000,
             horizontalPosition: 'start',
           });

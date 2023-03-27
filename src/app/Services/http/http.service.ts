@@ -21,4 +21,7 @@ putService(url : string, reqData: any,  tokenRequired: boolean , httpOptions: an
     
   return this.httpClient.get(this.baseurl+url,tokenRequired && httpOptions)
 }
+deleteService(url:string, reqdata:any, token:boolean=false,httpOptions:any){
+  return this.httpClient.delete(this.baseurl+url,token && httpOptions);
+}
 }

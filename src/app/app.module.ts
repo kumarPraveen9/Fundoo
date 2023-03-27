@@ -25,15 +25,19 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import {MatCardModule} from '@angular/material/card';
 import { CreatenoteComponent } from './Components/createnote/createnote.component';
-import { IconsnoteComponent } from './Components/iconsnote/iconsnote.component';
+import { IconsnoteComponen } from './Components/iconsnote/iconsnote.component';
 import { GetAllnotesComponent } from './Components/get-allnotes/get-allnotes.component';
 import { DisplaynoteComponent } from './Components/displaynote/displaynote.component';
 import { DeletenoteComponent } from './Components/deletenote/deletenote.component';
 import { TrashnoteComponent } from './Components/trashnote/trashnote.component';
 import { UpdatenoteComponent } from './Components/updatenote/updatenote.component';
+import { ArchivenoteComponent } from './Components/archivenote/archivenote.component';
 
 
 @NgModule({
@@ -45,12 +49,13 @@ import { UpdatenoteComponent } from './Components/updatenote/updatenote.componen
     ForgetPasswordComponent,
     DashboardComponent,
     CreatenoteComponent,
-    IconsnoteComponent,
+    IconsnoteComponen,
     GetAllnotesComponent,
     DisplaynoteComponent,
     DeletenoteComponent,
     TrashnoteComponent,
     UpdatenoteComponent,
+    ArchivenoteComponent,
    
    
    
@@ -69,7 +74,10 @@ import { UpdatenoteComponent } from './Components/updatenote/updatenote.componen
     MatSnackBarModule,
     HttpClientModule
    ,MatSidenavModule,
-   MatCardModule
+   MatCardModule,
+   MatMenuModule,
+   FormsModule,
+   MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

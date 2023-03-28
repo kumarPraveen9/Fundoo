@@ -1,4 +1,4 @@
-<div class="display-note row">
+<!-- <div class="display-note row">
     <div *ngFor="let note of archiveList">
       <mat-card class="note-card" [style.background]="note.color">
         <mat-card-title class="note-title">
@@ -20,4 +20,5 @@
         </div>
       </mat-card>
     </div>
-  </div>
+  </div> -->
+  <app-displaynote [NotesList]="archiveList"></app-displaynote>

@@ -1,5 +1,6 @@
-<div class="display-note row">
-    <div *ngFor="let note of NotesList">
+<div class="">
+<div [ngClass]="message">
+    <div *ngFor="let note of NotesList" class="">
         <mat-card class="note-card">
             <button class="pinbutton">
                 <img class="pin" src="../../../assets/push_pin.svg">
@@ -25,4 +26,5 @@
             <app-iconsnote [noteObject]="note"></app-iconsnote>
         </mat-card>
     </div>
+</div>
 </div>

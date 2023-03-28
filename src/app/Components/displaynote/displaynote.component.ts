@@ -1,7 +1,7 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
-
+import { GridService } from 'src/app/Services/grid/grid.service';
 @Component({
   selector: 'app-displaynote',
   templateUrl: './displaynote.component.html',
@@ -10,8 +10,15 @@ import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 export class DisplaynoteComponent implements OnInit{
 
   @Input() NotesList:any;
-  constructor(public dialog: MatDialog){};
-  ngOnInit() {}
+  
+message:any
+  constructor(public dialog: MatDialog,private gridService:GridService){};
+  ngOnInit() {
+    this.message=this.gridService.dummy2.subscribe((result)=>{
+      console.log("display note will got " , result);
+      this.message=result;
+    })
+  }
    
     openDialog(note:any): void {
       const dialogRef = this.dialog.open(UpdatenoteComponent, {

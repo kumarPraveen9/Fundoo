@@ -23,5 +23,15 @@ export class GetAllnotesComponent implements OnInit{
     });
 
   }
+  
+  receiveDisplayGetAllNotes($event: any) {
+    console.log("Display All Notes",$event);
+    this.onSubmit()
+  }
+
+  receiveCreateNotes($event: any) {
+    console.log("Note Created", $event);
+    this.onSubmit()
+  }
 
 }

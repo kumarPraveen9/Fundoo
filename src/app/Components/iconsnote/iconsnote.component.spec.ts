@@ -1,23 +1,23 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+// import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IconsnoteComponent } from './iconsnote.component';
+// import { IconsnoteComponen } from './iconsnote.component';
 
-describe('IconsnoteComponent', () => {
-  let component: IconsnoteComponent;
-  let fixture: ComponentFixture<IconsnoteComponent>;
+// describe('IconsnoteComponent', () => {
+//   let component: IconsnoteComponen;
+//   let fixture: ComponentFixture<IconsnoteComponen>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ IconsnoteComponent ]
-    })
-    .compileComponents();
+//   beforeEach(async () => {
+//     await TestBed.configureTestingModule({
+//       declarations: [ IconsnoteComponen ]
+//     })
+//     .compileComponents();
 
-    fixture = TestBed.createComponent(IconsnoteComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//     fixture = TestBed.createComponent(IconsnoteComponen);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });

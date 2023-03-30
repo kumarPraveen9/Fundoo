@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NodeService } from 'src/app/Services/note/node.service';
@@ -10,6 +10,7 @@ import { NodeService } from 'src/app/Services/note/node.service';
 export class CreatenoteComponent implements OnInit {
   display: boolean = true;
   registerForm!: FormGroup;
+
   constructor(
     private formBuilder: FormBuilder,
     private nodeService: NodeService,
@@ -33,6 +34,7 @@ export class CreatenoteComponent implements OnInit {
       this.nodeService.addnote(data).subscribe(
         (response: any) => {
           console.log('addNote cli successful', response);
+        
           //localStorage.setItem('token',response.id);
           this._snackBar.open('note added succesfully', '', {
             duration: 15000,

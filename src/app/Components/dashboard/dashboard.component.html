@@ -7,13 +7,13 @@
     <h1 class="example-app-name">Fundoo</h1>
 
     <div class="search-box">
-      <img src="../../../assets/search.svg">
-      <input matInput placeholder="Search">
+      <img src="../../../assets/search.svg" (click)="search(dt.value)">
+      <input matInput #dt placeholder="Search">
     </div>
     <div class="top-r8">
       <div class="right-icons">
         <img src="../../../assets/refresh.svg">
-        <img src="../../../assets/view.svg"  (click)="colView()">
+        <img src="{{myImg}}" id="imag" (click)="colView()" >
         <!-- <app-displaynote [message]="cls"></app-displaynote> -->
         <img src="../../../assets/settings.svg">
       </div>
@@ -37,7 +37,7 @@
         <a mat-list-item routerLink="/dashboard/notes">
           <img src="../../../assets/lightbulb_FILL0_wght400_GRAD0_opsz48.svg" class="b"><span
             class="inne">notes</span></a>
-        <a mat-list-item routerLink="/dashboard">
+        <a mat-list-item routerLink="/dashboard/reminder">
           <img src="../../../assets/reminder.svg" class="b"><span class="inne">reminder</span></a>
         <a mat-list-item routerLink="/dashboard">
           <img src="../../../assets/edit.svg" class="b"><span class="inne">label</span></a>

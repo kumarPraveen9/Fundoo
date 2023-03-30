@@ -8,6 +8,7 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { GetAllnotesComponent } from './Components/get-allnotes/get-allnotes.component';
 import { TrashnoteComponent } from './Components/trashnote/trashnote.component';
 import { ArchivenoteComponent } from './Components/archivenote/archivenote.component';
+import { ReminderComponent } from './Components/reminder/reminder.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
    children:[
     {path:'notes',component:GetAllnotesComponent},
     {path:'trash',component:TrashnoteComponent},
-    {path:'archive',component:ArchivenoteComponent}
+    {path:'archive',component:ArchivenoteComponent},
+    {path:'reminder',component:ReminderComponent}
    ]}
 ];
 

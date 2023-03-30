@@ -5,13 +5,18 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class GridService {
-mssg:any
-dummy= new BehaviorSubject([]);
-dummy2= this.dummy.asObservable();
-  constructor() { }
+mssg:any=localStorage.getItem('notesView');
+
+
+
+outmsg= new BehaviorSubject([]);
+inmsg= this.outmsg.asObservable();
+  constructor() {
+   
+   }
 sendMessage(data:any)
 {
-  this.dummy.next(data);
+  this.outmsg.next(data);
 }
 
 

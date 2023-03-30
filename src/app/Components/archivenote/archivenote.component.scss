@@ -1,42 +1,43 @@
-.display-note{
-    display: flex;
-    flex-flow: wrap;
-    position: relative;
-    left: 10%;
-    width: 85%;
-    column-gap: 20px;
-    margin-top: 30px;
+// .display-note{
+//     display: flex;
+//     flex-flow: wrap;
+//     position: relative;
+//     left: 10%;
+//     width: 85%;
+//     column-gap: 20px;
+//     margin-top: 30px;
   
-}
+// }
 
-.note-card {
-    overflow-wrap: break-word;
-    width: 200px;
-    height: auto;
-    min-height: 80px;
-    margin-top: 20px;
-    padding-bottom: 20px;
-    padding-top: 10px;
-}
+// .note-card {
+//     overflow-wrap: break-word;
+//     width: 200px;
+//     height: auto;
+//     min-height: 80px;
+//     margin-top: 82px !important;
+//     padding-bottom: 20px;
+//     padding-top: 10px;
+// }
  
-.note-title{
-   overflow-wrap: break-word;
-   margin-top: 20px;
-   font-size: 15px;
-}
+// .note-title{
+//    overflow-wrap: break-word;
+//    margin-top: 20px;
+//    font-size: 15px;
+// }
  
-.note-description{
-   overflow-wrap: break-word;
-   font-size: 15px;
-   padding-top: 10px;
-   min-height: 35px;
-   margin-bottom: 0px;
-}
+// .note-description{
+//    overflow-wrap: break-word;
+//    font-size: 15px;
+//    padding-top: 10px;
+//    min-height: 35px;
+//    margin-bottom: 0px;
+// }
  
 .notesbutton{
    display: flex;
    gap: 14px;
    border: none;
+   margin-top: 300px !important;
    background: none;
    cursor: pointer;
    img{
@@ -45,3 +46,4 @@
        padding-top: 10px;
    }
 }
+

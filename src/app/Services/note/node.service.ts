@@ -52,7 +52,7 @@ export class NodeService {
   }
 
   getallArchivenotes() {
-    console.log('get trash notes :');
+    console.log('get archive notes :');
     let header = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
@@ -60,6 +60,17 @@ export class NodeService {
       }),
     };
     return this.httpService.getService('notes/getArchiveNotesList', true, header);
+  }
+
+  getallremindernotes() {
+    console.log('get reminder notes :');
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        Authorization: this.token,
+      }),
+    };
+    return this.httpService.getService('notes/getReminderNotesList', true, header);
   }
 
 
@@ -103,5 +114,28 @@ export class NodeService {
       })
     }
     return this.httpService.postService('notes/archiveNotes',reqdata,true,header)
+  }
+  remindnotes(reqdata: any){
+    
+
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':  this.token
+      })
+    }
+    return this.httpService.postService('notes/addUpdateReminderNotes',reqdata,true,header)
+  }
+
+  notesColor(reqdata: any){
+    
+
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':  this.token
+      })
+    }
+    return this.httpService.postService('notes/changesColorNotes',reqdata,true,header)
   }
 }

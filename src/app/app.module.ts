@@ -38,6 +38,8 @@ import { DeletenoteComponent } from './Components/deletenote/deletenote.componen
 import { TrashnoteComponent } from './Components/trashnote/trashnote.component';
 import { UpdatenoteComponent } from './Components/updatenote/updatenote.component';
 import { ArchivenoteComponent } from './Components/archivenote/archivenote.component';
+import { ReminderComponent } from './Components/reminder/reminder.component';
+import { FilterPipe } from './Pipe/filter.pipe';
 
 
 @NgModule({
@@ -56,6 +58,8 @@ import { ArchivenoteComponent } from './Components/archivenote/archivenote.compo
     TrashnoteComponent,
     UpdatenoteComponent,
     ArchivenoteComponent,
+    ReminderComponent,
+    FilterPipe,
    
    
    

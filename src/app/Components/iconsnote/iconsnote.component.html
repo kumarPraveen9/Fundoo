@@ -1,8 +1,13 @@
 <div class="icons">
     <button class="notesbutton">
-        <img src="../../../assets/add_alert.svg">
+        <img src="../../../assets/add_alert.svg" (click)="remind()">
         <img src="../../../assets/person_add.svg">
-        <img src="../../../assets/palette.svg">
+        <img src="../../../assets/palette.svg"  [matMenuTriggerFor]="paletteMenu">
+        <mat-menu #paletteMenu="matMenu">
+            <div *ngFor='let colors of colorArray'>
+              <button class="colorIcon" [style.background]="colors.code" (click)="selectColor(colors)"></button>
+            </div>
+          </mat-menu>
         <img src="../../../assets/image.svg">
         <img src="../../../assets/archive.svg" (click)="onArchive()">
        

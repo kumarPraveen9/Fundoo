@@ -40,6 +40,7 @@ import { UpdatenoteComponent } from './Components/updatenote/updatenote.componen
 import { ArchivenoteComponent } from './Components/archivenote/archivenote.component';
 import { ReminderComponent } from './Components/reminder/reminder.component';
 import { FilterPipe } from './Pipe/filter.pipe';
+import { AuthguardService } from './authguard.service';
 
 
 @NgModule({
@@ -83,7 +84,9 @@ import { FilterPipe } from './Pipe/filter.pipe';
    FormsModule,
    MatDialogModule
   ],
-  providers: [],
+  providers: [
+    AuthguardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

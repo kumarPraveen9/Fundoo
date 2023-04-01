@@ -64,8 +64,8 @@ console.log(this.noteObject);
 
   selectColor(colors:any){
     let reqData = {
-      color : colors.name,
-      noteID : this.noteObject.id
+      color : colors.code,
+      noteIdList : [this.noteObject.id]
     }
     console.log(reqData);
      this.note.notesColor(reqData).subscribe((response:any) =>{

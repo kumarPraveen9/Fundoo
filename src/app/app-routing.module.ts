@@ -9,17 +9,18 @@ import { GetAllnotesComponent } from './Components/get-allnotes/get-allnotes.com
 import { TrashnoteComponent } from './Components/trashnote/trashnote.component';
 import { ArchivenoteComponent } from './Components/archivenote/archivenote.component';
 import { ReminderComponent } from './Components/reminder/reminder.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 
 const routes: Routes = [
 
-  {path:'login',component:LoginComponent},
+  {path:'login',component:LoginComponent,canActivate:[AuthenticationGuard]},
   {path:'sign-up',component:SignUpComponent},
   {path:'reset',component:ResetPasswordComponent},
   {path:'forget',component:ForgetPasswordComponent},
   {path:'dashboard',component:DashboardComponent,
    children:[
-    {path:'notes',component:GetAllnotesComponent},
+    {path:'notes',component:GetAllnotesComponent,canActivate:[AuthenticationGuard]},
     {path:'trash',component:TrashnoteComponent},
     {path:'archive',component:ArchivenoteComponent},
     {path:'reminder',component:ReminderComponent}

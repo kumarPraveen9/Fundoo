@@ -40,6 +40,7 @@ export class CreatenoteComponent implements OnInit {
             duration: 15000,
             horizontalPosition: 'start',
           });
+          window.location.reload();
         },
 
         (error) => {

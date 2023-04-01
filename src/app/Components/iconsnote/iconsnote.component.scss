@@ -11,6 +11,9 @@
     }
     margin-bottom:10px ;
 }
+.clr{
+    
+}
 
 .colorIcon{
     border-radius: 100px;
@@ -20,3 +23,16 @@
     cursor: pointer;
 }
 
+.row
+{
+    display: flex ;
+    flex-wrap: wrap;
+    
+    
+}
+
+.menuSize
+{
+    width: 50px !important;
+    height: auto !important;
+}

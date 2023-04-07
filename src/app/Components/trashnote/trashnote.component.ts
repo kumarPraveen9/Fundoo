@@ -24,4 +24,17 @@ this.notes.getallTrashnotes().subscribe((response : any) => {
 
 }
 
+deleteforever(noteid:any)
+{
+  let reqData={
+   
+    noteIdList:[noteid.id]
+  }
+  console.log(reqData)
+  this.notes.getPermenentdelete(reqData).subscribe((response: any) => {
+    console.log("Note deleted forever Successfully",response);
+    window.location.reload();
+})
+}
+
 }

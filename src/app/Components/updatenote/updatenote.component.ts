@@ -33,5 +33,6 @@ export class UpdatenoteComponent implements OnInit {
       console.log('update response', response);
     });
     this.dialogRef.close();
+    window.location.reload();
   }
 }

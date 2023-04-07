@@ -138,4 +138,15 @@ export class NodeService {
     }
     return this.httpService.postService('notes/changesColorNotes',reqdata,true,header)
   }
+
+  getPermenentdelete(reqdata: any)
+  {
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':  this.token
+      })
+    }
+    return this.httpService.postService('notes/deleteForeverNotes',reqdata,true,header)
+  }
 }

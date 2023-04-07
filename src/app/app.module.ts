@@ -1,3 +1,4 @@
+import * as $ from 'jquery';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -82,7 +83,8 @@ import { AuthguardService } from './authguard.service';
    MatCardModule,
    MatMenuModule,
    FormsModule,
-   MatDialogModule
+   MatDialogModule,
+   
   ],
   providers: [
     AuthguardService

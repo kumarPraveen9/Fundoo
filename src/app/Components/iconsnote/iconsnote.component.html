@@ -5,9 +5,9 @@
        
         <img src="../../../assets/palette.svg"  [matMenuTriggerFor]="paletteMenu">
         
-        <mat-menu  #paletteMenu="matMenu">
-          <div class="row" >
-            <div  *ngFor='let colors of colorArray'>
+        <mat-menu class="menuSize BGColorPallet" #paletteMenu="matMenu">
+          <div class="row clr" >
+            <div class="" *ngFor='let colors of colorArray'>
               <button class="colorIcon" [style.background]="colors.code" (click)="selectColor(colors)"></button>
             </div>
           </div>

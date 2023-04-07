@@ -1,6 +1,6 @@
-<!-- <div class="display-note row">
+<div class="display-note row">
     <div *ngFor="let note of trashList">
-        <mat-card class="note-card">
+        <mat-card class="note-card" [style.background]="note.color">
            
             <mat-card-title class="note-title" >
                 {{note.title}}
@@ -9,9 +9,14 @@
                 {{note.description}}
              
             </mat-card-content>
-           
+            <div class="icons">
+                <button class="notesbutton">
+                    <img src="../../../assets/delete_forever_FILL0_wght400_GRAD0_opsz48.svg" (click)="deleteforever(note)">
+                    <img src="../../../assets/restore_from_trash_FILL0_wght400_GRAD0_opsz48.svg">
+                    </button>
+                </div>
            
         </mat-card>
     </div>
-</div> -->
-<app-displaynote [NotesList]="trashList"></app-displaynote>
+</div>
+<!-- <app-displaynote [NotesList]="trashList"></app-displaynote> -->

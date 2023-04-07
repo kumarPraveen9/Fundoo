@@ -17,7 +17,7 @@
       <div class="notesfield">
         <form [formGroup]="registerForm" (ngSubmit)="addnote()">
           <div class="titlebar">
-            <input class="title" type="text" placeholder="Title" formControlName="title">
+            <input class="title" type="textarea" placeholder="Title" formControlName="title" wrap="hard" col="20">
             <button class="notesbutton">
               <img class="notes_img" src="../../../assets/push_pin.svg">
             </button>

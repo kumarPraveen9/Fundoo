@@ -1,11 +1,12 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar color="" class="example-toolbar">
+   
     <button mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
     <img src="../../../assets/logo.png" alt="" srcset="" width="40px" height="40px">
     <h1 class="example-app-name">Fundoo</h1>
-
+  
     <div class="search-box">
       <img src="../../../assets/search.svg" (click)="search(dt.value)">
       <input matInput #dt placeholder="Search">

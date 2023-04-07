@@ -3,18 +3,21 @@ import { MatDialog } from '@angular/material/dialog';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 import { GridService } from 'src/app/Services/grid/grid.service';
 import { DataServiceService } from 'src/app/Services/dataService/data-service.service';
+import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 @Component({
   selector: 'app-displaynote',
   templateUrl: './displaynote.component.html',
   styleUrls: ['./displaynote.component.scss'],
 })
 export class DisplaynoteComponent implements OnInit {
-  @Input() NotesList: any;
+  @Input() NotesList:any;
+  lenthTitle:any=[];
   @Output() DisplayGetAllNotes = new EventEmitter<string>();
   msg: any;
   message: any;
   defalt: any;
   searchNote: any;
+  titlle:any;
   vv: any = 'note-card';
   pn: any = 'pin';
   constructor(
@@ -23,6 +26,18 @@ export class DisplaynoteComponent implements OnInit {
     private data: DataServiceService
   ) {}
   ngOnInit() {
+    console.log("hadsa",this.NotesList);
+    
+  
+    // this.lenthTitle=Object.entries(this.NotesList.title).length;
+    // if(this.lenthTitle>60)
+    // {
+    //   this.titlle=this.lenthTitle.slice(0,63);
+    //   console.log("the shorted one:  ",this.titlle);
+      
+    // }
+
+
     this.data.incomingData.subscribe((response) => {
       console.log('Search :', response);
       this.searchNote = response;

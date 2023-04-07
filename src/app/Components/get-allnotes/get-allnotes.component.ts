@@ -6,8 +6,9 @@ import { NodeService } from 'src/app/Services/note/node.service';
   styleUrls: ['./get-allnotes.component.scss']
 })
 export class GetAllnotesComponent implements OnInit{
-  notesArray:any;
-
+  notesArray=[];
+x:any
+dataUpdated:any=[];
   constructor(private nodeService: NodeService) { }
 
   ngOnInit(): void {
@@ -16,10 +17,19 @@ export class GetAllnotesComponent implements OnInit{
   onSubmit(){
     console.log('Get all notes onsubmit:');
     this.nodeService.getallnotes().subscribe((response : any) => {
-      console.log(response);
+     // console.log("het h",response);
       this.notesArray=response.data.data;
-      this.notesArray.reverse();
-      console.log(this.notesArray);
+
+      
+
+      this.dataUpdated = this.notesArray.filter(function(obj:any) {
+     // console.log(obj.isDeleted);
+        return (obj.isDeleted==false && obj.isArchived==false);
+    });
+   
+      
+     this.dataUpdated.reverse();
+     console.log("this is that:",this.dataUpdated);
     });
 
   }

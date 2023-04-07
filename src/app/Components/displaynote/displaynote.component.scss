@@ -23,12 +23,13 @@
     border: none;
     background: none;
     cursor: pointer;
+    position: absolute;
 }
 img.pin  {
     margin-left: 190px;
     opacity: 0.7;
     height: 24px;
-    position: relative;   
+    position: absolute;   
 }
 img.pingrid  {
     margin-left: 593px;
@@ -36,15 +37,18 @@ img.pingrid  {
     height: 24px;
     position: relative;   
 }
+
     
 .note-card {
      overflow-wrap: break-word;
-     width: 270px;
-     height: 15vh;
-     min-height: 80px;
+     width: 240px;
+    //  height: 113px;
+    //  min-height: 113px;
      margin-top: 20px;
-     padding-bottom: 20px;
+     //padding-bottom: 20px;
      padding-top: -5px;
+     //max-width: 527px;
+     height: auto;
 }
 .note-cardgrid {
     overflow-wrap: break-word;
@@ -52,7 +56,7 @@ img.pingrid  {
     height: 15vh;
     min-height: 80px;
     margin-top: 20px;
-    padding-bottom: 20px;
+    //padding-bottom: 20px;
     padding-top: -5px;
 }
   
@@ -62,20 +66,29 @@ img.pingrid  {
     margin-top: 0px;
     font-size: 15px;
     margin-left: 17px;
+    height: auto;
+    border: none;
+    outline: none;
+    white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
   
 .note-description{
     //position: absolute;
     overflow-wrap: break-word;
-    font-size: 15px;
+    font-size: 12px;
     padding-top: 10px;
     min-height: 35px;
     margin-bottom: 0px;
+    border: none;
+    outline: none;
+    height: auto;
 }
   
 .notesbutton{
     display: flex;
-    gap: 14px;
+    gap: 21px ;
     border: none;
     background: none;
     cursor: pointer;
@@ -84,4 +97,55 @@ img.pingrid  {
         width: 20px;
         padding-top: 10px;
     }
+}
+.icons {
+    visibility: hidden;
+  }
+  .pinbutton
+  {
+    visibility: hidden;
+  }
+.note-card:hover .icons {
+    visibility:visible;
+  }
+  .note-card:hover .pinbutton {
+    visibility:visible;
+  }
+
+@media only screen and (min-width:413px) and (max-width:599px)
+{
+    .note-card {
+        overflow-wrap: break-word;
+        width: 500px;
+        // height: 15vh;
+        // min-height: 140px;
+        margin-top: 20px;
+       // padding-bottom: 20px;
+        padding-top: -5px;
+        margin-left: 5px;
+        height: auto;
+   }
+   img.pin  {
+    margin-left: 450px;
+    opacity: 0.7;
+    height: 24px;
+    position: relative;   
+}
+}
+
+@media only screen and (max-width:412px)
+{
+    .note-card {
+        overflow-wrap: break-word;
+        width: 300px;
+        // height: 15vh;
+        // min-height: 140px;
+        margin-top: 20px;
+        //padding-bottom: 20px;
+        padding-top: -5px;
+        margin-left: 23px;
+        height: auto;
+   }
+
+
 }

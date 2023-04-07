@@ -6,8 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
 
   transform(value: any, searchNote: string) {
-    console.log(searchNote);
-    console.log("the vvvvv is::",value)
+    // console.log(searchNote);
+    // console.log("the vvvvv is::",value)
     if (value.length === ''){
       return value;
     }
@@ -18,7 +18,7 @@ export class FilterPipe implements PipeTransform {
         Message.push(note)
       }
     }
-    console.log("the msg is:",Message);
+    // console.log("the msg is:",Message);
     
     return Message;
      

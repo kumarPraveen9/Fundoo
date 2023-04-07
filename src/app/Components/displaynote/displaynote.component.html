@@ -1,6 +1,7 @@
 <div class="">
 <div [ngClass]="message">
-    <div *ngFor="let note of NotesList | filter: searchNote"> 
+    <div *ngFor="let note of NotesList | filter: searchNote" > 
+     
         <mat-card class="{{vv}}" [style.background]="note.color">
             <button class="pinbutton">
                 <img class="{{pn}}" src="../../../assets/push_pin.svg">
@@ -12,9 +13,12 @@
                 {{note.description}}
                 <!-- <div> {{note.id}}</div> -->
             </mat-card-content>
-         
+         <div class="icons">
             <app-iconsnote [noteObject]="note" (NotesDisplay)="receiveNotesDisplay($event)"></app-iconsnote>
+         </div>
+           
         </mat-card>
+   
     </div>
 </div>
 
